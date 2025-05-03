@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="OrderService_BR_9085" type="Application" factoryName="Application" folderName="OrderService">
-    <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../../../Program Files/Java/jdk-21" />
+  <configuration default="false" name="OrderService_BR_9090" type="Application" factoryName="Application" folderName="OrderService">
+    <option name="ALTERNATIVE_JRE_PATH" value="17" />
     <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
     <option name="MAIN_CLASS_NAME" value="com.upendra.order_service.OrderServiceApplication" />
     <module name="order_service" />

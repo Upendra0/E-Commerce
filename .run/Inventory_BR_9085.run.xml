@@ -1,0 +1,13 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Inventory_BR_9085" type="Application" factoryName="Application" folderName="InventoryService">
+    <option name="ALTERNATIVE_JRE_PATH" value="17" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <option name="MAIN_CLASS_NAME" value="com.upendra.inventory_service.InventoryServiceApplication" />
+    <module name="inventory_service" />
+    <option name="PROGRAM_PARAMETERS" value="--spring.profiles.active=dev --server.hostname=localhost --server.port=9085 --server.zone=BR" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/inventory_service" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
