@@ -1,0 +1,29 @@
+server:
+  port: 9098
+
+spring:
+  application:
+    name: NotificationService
+
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: notification-service
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      auto-offset-reset: latest
+      properties:
+        spring.json.trusted.packages: "com.upendra.notification_service.dto"
+        spring.json.value.default.type: com.upendra.notification_service.dto.OrderPlaceEvent
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: upendra.kumar06704@gmail.com
+    password: mhkd bbus cggt jetr
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
