@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            margin-bottom: 20px;
+        }
+        .order-summary {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .order-summary th, .order-summary td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        .order-summary th {
+            background: #f8f8f8;
+            text-align: left;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h2>Thank you for your order, <span th:text="${customerName}">Customer</span>!</h2>
+        <p>Order ID: <strong th:text="${orderId}">#12345</strong></p>
+        <p>Order Date: <strong th:text="${orderDate}">01 Jan 2025</strong></p>
+    </div>
+
+    <table class="order-summary">
+        <thead>
+        <tr>
+            <th>Item</th>
+            <th>Qty</th>
+            <th>Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="item : ${items}">
+            <td th:text="${item.name}">Product Name</td>
+            <td th:text="${item.quantity}">1</td>
+            <td th:text="${item.price}">100.00</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="2"><strong>Total</strong></td>
+            <td><strong th:text="${total}">100.00</strong></td>
+        </tr>
+        </tfoot>
+    </table>
+
+    <div class="footer">
+        <p>If you have any questions, contact our support team.</p>
+    </div>
+</div>
+</body>
+</html>

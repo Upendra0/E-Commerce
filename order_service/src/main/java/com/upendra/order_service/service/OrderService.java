@@ -39,7 +39,7 @@ public class OrderService {
             log.info("Order Placed, id: {}", order.getOrderId());
 
             // send to kafka
-            orderPlacedEventKafkaTemplate.send("order-placed-v1", order.getOrderId(), new OrderPlacedEvent(order.getOrderId(), "upendra.kumar06704@gmail.com"));
+            orderPlacedEventKafkaTemplate.send("order-placed-v1", order.getOrderId(), new OrderPlacedEvent(order.getOrderId(), "uk06704@gmail.com"));
 
             return new OrderResponse(order.getOrderId(), order.getSkuCode(), order.getQuantity(), order.getPrice().doubleValue());
         } else{
